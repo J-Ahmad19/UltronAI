@@ -1,8 +1,7 @@
 import requests
 import streamlit as st
 import json
-import os
-api_key = os.environ["OPENROUTER_API_KEY"]
+
 
 
 st.markdown(
