@@ -1,6 +1,9 @@
 import requests
 import streamlit as st
 import json
+import os
+api_key = os.environ["OPENROUTER_API_KEY"]
+
 
 st.markdown(
     '''<div id="center-title"> <h1> Hi. I'm, <span style="color:#99ff00">UltronAI</span></h1> <p id="caption">How can I Help you today?</p></div>''',unsafe_allow_html=True
