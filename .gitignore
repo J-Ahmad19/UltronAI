@@ -1,8 +1,4 @@
-# Ignore Streamlit secrets
-.streamlit/secrets.toml
-
-# Ignore local configs (optional)
-.streamlit/config.toml
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
