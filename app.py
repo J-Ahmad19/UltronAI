@@ -1,11 +1,20 @@
 import requests
 import streamlit as st
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+api_key = os.getenv("OPENROUTER_API_KEY")
+
+
 
 
 
 st.markdown(
-    '''<div id="center-title"> <h1> Hi. I'm, <span style="color:#99ff00">UltronAI</span></h1> <p id="caption">How can I Help you today?</p></div>''',unsafe_allow_html=True
+    "<div id='center-title'> <h1> Hi. I'm, <span style='color:#99ff00'>UltronAI</span></h1> <p id='caption'>How can I Help you today?</p></div>",
+    unsafe_allow_html=True
 )
 
 st.markdown(
@@ -54,7 +63,7 @@ if prompt:
     # OpenRouter request
     url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {
-        "Authorization": f"Bearer {st.secrets['OPENROUTER_API_KEY']}",
+        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
     payload = {
